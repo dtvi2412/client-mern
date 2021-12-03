@@ -1,0 +1,94 @@
+
+.auth{
+    width:100%;
+    height:100%;
+    background-image: url('https://cdn.wallpapersafari.com/3/89/53j19Z.jpg');
+    background-repeat: no-repeat;
+    background-size:cover;
+
+    position: fixed;
+    top: 0;
+    left:0;
+    right:0;
+
+}
+.auth__content{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+}
+
+.form{
+    color:var(--color-form);
+}
+/*  */
+.form__group{
+    display:flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+.form__group label{
+    margin-bottom: 4px;
+}
+.form__group input{
+    padding:8px 14px;
+    border-radius: 10px;
+
+    outline:none;
+    border:1px solid #111;
+    overflow: hidden;
+    min-width:400px;
+}
+.form__group input::placeholder{
+    font-family: 'Courier New', Courier, monospace;
+}
+.form__button{
+    text-align: center
+}
+.form__button button{
+    width:100%;
+
+    padding:12px 0px;
+    border-radius: 10px;
+    min-width:400px;
+
+    margin-top:20px;
+    margin-bottom: 20px;
+    outline:none;
+    border:1px solid #111;
+    background-color: #26d4ff;
+    color:rgb(0, 0, 0);
+    font-weight: bolder;
+
+    transition: all .3s;
+    cursor: pointer;
+}
+.form__button button:hover{
+    opacity: 0.9;
+    box-shadow: 1px 1px 3px #111;
+}
+.form__button a{
+    background:rgb(118, 253, 106);
+    color:rgb(15, 15, 15);
+    text-decoration: none;
+    padding:8px 40px;
+    margin-top:20px;
+    border-radius: 10px;
+    display:inline-block;
+}
+
+
+
+/* --Moblie width < 740px -- */
+@media only screen and (max-width:739px){
+	.form__group input, .form__button button{
+        /* width:260px; */
+        min-width: 200px;
+    }
+
+    .modalForm h1{
+        font-size:1.4em;
+    }
+}
+

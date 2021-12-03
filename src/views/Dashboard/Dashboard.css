@@ -1,0 +1,135 @@
+.dashboard{
+    width:100%;
+    max-width:1200px;
+    margin:20px auto;
+
+}
+
+.dashboard__posts{
+    display:flex;
+    align-items: center;
+    justify-content:center;
+    flex-wrap: wrap;
+
+}
+.dashboard__openModal{
+    position:fixed;
+    bottom:40px;
+    right:40px;
+
+    cursor: pointer;
+    color:rgb(131, 148, 245);
+   
+}
+.dashboard__openModal:hover::before,.dashboard__openModal:hover::after{
+    display:inline-block;
+}
+.dashboard__openModal::before{
+    content:'Nhấn để thêm khóa học!';
+    position: absolute;
+    right:calc(100% + 10px);
+    top:50%;
+    transform:translateY(-50%);
+    text-align: center;
+    min-width:200px;
+    font-size:14px;
+   
+    color:rgb(12, 10, 10);
+    background:rgb(90, 171, 248);
+    font-weight: 600;
+    border-radius: 10px;
+    padding:10px 20px;
+    transition:all .4s;
+
+    display:none;
+    /* animation: fade .3s ease-in 0s 1; */
+ 
+}
+.dashboard__openModal::after{
+    content: '';
+    position:absolute;
+    right:calc(100% - 16px);
+    top:50%;
+    transform:translateY(-50%);
+
+    border-width:18px;
+    border-style:solid;
+    border-color:transparent transparent transparent rgb(90, 171, 248);
+    border-radius: 10px;
+    transition:all .4s;
+
+    display:none;
+    /* animation: fade .3s ease-in 0s 1; */
+}
+.dashboard__openModal__icon{
+    cursor: pointer;
+    font-size:3.6em;
+    position: relative;
+    z-index:11;
+}
+
+/* No Post -> Length 0 */
+
+.postNothing{
+    background: #ccc;
+    color:#111;
+    max-width:1200px;
+    width:100%;
+    margin:0 auto;
+
+    text-align:center;
+
+    border:1px solid rgb(126, 126, 126);
+    border-radius: 10px;
+    box-shadow: 2px 2px 3px rgb(145, 145, 145);
+    padding:40px 0;
+}
+.postNothing h1 {
+    background: #ccc;
+    color:#111;
+
+}
+.postNothing button{
+    border:none;
+    box-shadow: 2px 2px 3px #111;
+    border-radius:10px;
+    padding:20px 40px;
+    background:rgb(153, 230, 153);
+    color:#fff;
+    cursor: pointer;
+    font-weight: bolder;
+    transition:all .3s;
+}
+.postNothing button:hover{
+    opacity: 0.8;
+
+    box-shadow: 4px 4px 3px #111;
+}
+.postNothing__icon{
+    font-size:2em;
+    color:rgb(48, 92, 112);
+}
+@keyframes fade {
+    from {
+        opacity: 0;
+       
+    }
+    to {
+        opacity: 1;
+       
+    }
+}
+@media only screen and (max-width: 739px) {
+    .dashboard__openModal{
+        right:10px;
+        bottom:10px;
+    }
+    .dashboard__openModal__icon{
+       font-size:3em;
+    }
+    .dashboard__openModal::before{
+        min-width:150px;
+    }
+
+
+}

@@ -1,0 +1,9 @@
+.alertFalse{
+
+    color:red;
+    background:rgb(252, 61, 61);
+    color:#fff;
+    font-weight: bolder;
+    padding:10px;
+    text-align: center;
+}

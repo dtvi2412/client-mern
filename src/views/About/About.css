@@ -1,0 +1,20 @@
+.about a{
+    text-decoration: none;
+    text-align: center;
+
+    background-color: rgb(173, 236, 252);
+    color:#111;
+
+    display:inline-block;
+    position:absolute;
+    top:10%;
+    left:50%;
+    transform:translate(-50%,-10%);
+
+    padding:20px;
+    border-radius: 10px;
+    font-weight: bolder;
+    box-shadow:0 0 21px #ccc;
+
+    margin-top:40px;
+}

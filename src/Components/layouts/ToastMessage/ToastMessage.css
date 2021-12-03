@@ -1,0 +1,26 @@
+.toastMessage{
+    position: fixed;
+    top: 40px;
+    right:40px;
+
+    padding:10px 20px;
+    border-radius: 10px;
+    color:#fff;
+    animation: RightInLeft  ease-in-out 0.3s;
+}
+
+@keyframes RightInLeft {
+    from {
+        right:-100%;
+    }
+    to {
+        right:40px;
+    }
+}
+
+@media only screen and (max-width:739px) {
+    .toastMessage{
+        top:20px;
+        right:10px;
+    }
+}
